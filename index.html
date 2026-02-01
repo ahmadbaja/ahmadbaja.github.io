@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Ahmad Ripai</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body { transition: background 0.3s, color 0.3s; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px rgba(0,0,0,0.15); }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full bg-white/90 dark:bg-gray-800/90 backdrop-blur shadow z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="font-bold text-xl">Ahmad Ripai</h1>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a href="#home" class="hover:text-blue-500">Home</a>
+      <a href="#about" class="hover:text-blue-500">About</a>
+      <a href="#portfolio" class="hover:text-blue-500">Portfolio</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+      <a href="cv.pdf" download class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Download CV</a>
+      <button onclick="toggleDark()">🌓</button>
+    </nav>
+    <button class="md:hidden" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 p-4 space-y-2">
+    <a href="#home" class="block">Home</a>
+    <a href="#about" class="block">About</a>
+    <a href="#portfolio" class="block">Portfolio</a>
+    <a href="#contact" class="block">Contact</a>
+    <a href="cv.pdf" download class="block bg-blue-600 text-white px-3 py-1 rounded">Download CV</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="pt-28 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 p-8 items-center" data-aos="fade-up">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">Halo, saya Ahmad Ripai</h2>
+      <p class="mb-6">Siswa Teknik Komputer dan Jaringan (TKJ) dengan minat di bidang elektro dan elektronika dasar.</p>
+      <div class="flex gap-4">
+        <a href="#contact" class="bg-white text-blue-600 px-6 py-2 rounded font-semibold hover:bg-gray-200">Hubungi Saya</a>
+        <a href="cv.pdf" download class="border border-white px-6 py-2 rounded hover:bg-white hover:text-blue-600">Download CV</a>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <img src="foto.jpg" class="rounded-2xl shadow-lg w-72 border-4 border-white">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 bg-gray-100 dark:bg-gray-800">
+  <div class="max-w-4xl mx-auto text-center px-6" data-aos="fade-right">
+    <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+    <p class="text-gray-600 dark:text-gray-300">
+      Saya merupakan siswa jurusan Teknik Komputer dan Jaringan (TKJ) yang memiliki minat dalam bidang elektro,
+      terutama pada sistem kelistrikan dan elektronika dasar.
+    </p>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Portfolio</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="bg-white dark:bg-gray-800 p-5 rounded-xl card" data-aos="zoom-in">
+        <img src="project1.jpg" class="rounded mb-2">
+        <h3 class="font-bold">Proyek Jaringan Komputer (LAN)</h3>
+        <p class="text-sm text-gray-500">Instalasi dan konfigurasi jaringan LAN.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-5 rounded-xl card" data-aos="zoom-in">
+        <img src="project2.jpg" class="rounded mb-2">
+        <h3 class="font-bold">Proyek Servis & Perakitan Komputer</h3>
+        <p class="text-sm text-gray-500">Perakitan PC dan perbaikan hardware.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-5 rounded-xl card" data-aos="zoom-in">
+        <img src="project3.jpg" class="rounded mb-2">
+        <h3 class="font-bold">Membuat Charger Aki</h3>
+        <p class="text-sm text-gray-500">Rangkaian dasar pengisian aki.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-5 rounded-xl card" data-aos="zoom-in">
+        <img src="project4.jpg" class="rounded mb-2">
+        <h3 class="font-bold">Elektronika Dasar</h3>
+        <p class="text-sm text-gray-500">Belajar komponen & rangkaian.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800">
+  <div class="max-w-xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-center">Kontak</h2>
+
+    <form action="https://formspree.io/f/xxxxabcd" method="POST" class="space-y-3">
+      <input type="text" name="nama" placeholder="Nama" required class="w-full p-2 rounded border">
+      <input type="email" name="email" placeholder="Email" required class="w-full p-2 rounded border">
+      <textarea name="pesan" placeholder="Pesan" required class="w-full p-2 rounded border"></textarea>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Kirim</button>
+    </form>
+
+    <p class="mt-4 text-center">📞 WhatsApp: <b>085860788045</b></p>
+    <div class="text-center mt-2">
+      <a href="https://wa.me/6285860788045" target="_blank"
+         class="inline-block bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">
+        Chat via WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-200 dark:bg-gray-900 p-4 text-center">
+  © 2026 Ahmad Ripai - Portfolio
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+function toggleDark() {
+  document.documentElement.classList.toggle("dark");
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
